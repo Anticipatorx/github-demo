@@ -25,3 +25,10 @@ git restore {filename_here}                                 ===> new way of disc
 
 git mv {filename_here} {new_filename_here}                  ===> rename filename
 mv {filename_here} {new_filename_here}                      ===> deleted file, added new file with same content
+
+git mv {filename_here} {new_filename_here}                  ===> rename file
+git mv {new_filename_here} {filename_here}                  ===> revert back (as if did not do anything)
+
+git mv starts.txt {'Adding git to an existing project'/}
+cd {'Adding git to an existing project'/}
+mv starts.txt ..
