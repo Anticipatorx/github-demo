@@ -19,3 +19,6 @@ git ls-files                                                ===> list of all fil
 
 git reset HEAD {filename_here}                              ===> unstage files (added) back to the working directory
 git restore --staged {filename_here}                        ===> new way of unstaging
+
+git checkout -- {filename_here}                             ===> discharge changes in working directory
+git restore {filename_here}                                 ===> new way of discharge changes in working directory
