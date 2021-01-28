@@ -1,0 +1,32 @@
+git init {fresh-project}                                ===> Git creates a folder {fresh-projects}
+ls                                                      ===> check the content of the folder         
+cd {fresh-project}                                      ===> go to fresh-projects file directory
+ls -al                                                  ===> list all files and folders including .(dot)files
+cd .git/                                                ===> go into .git
+ls                                                      ===> view files inside .git/
+cd ..                                                   ===> go back
+
+git status                                              ===> On branch main
+                                                        ===> No commits yet
+                                                        ===> nothing to commit
+
+code {hipster.txt}                                      ===> Opens {hipster.txt} in VS Code
+
+ON VS Code:
+Paste Lorem Ipsum on {hipster.txt}
+
+git status                                              ===> Untracked files:
+git add {hipster.txt}                                   ===> add the changes to specific file / [git add .] -> adds changes to all files (STAGING AREA)
+git commit                                              ===> Opens Commit message in VS Code
+
+ON VS Code:
+Type Commit message
+Save
+Close
+
+                                                        ===> (root-commit) means very first/ initial commit
+git status                                              ===> Clean working tree (nothin to commit) -> (Git Repository)
+
+cd ..
+ls
+rm -rf {fresh-project}                                  ===> deletes the folder (No more Git Repository)
