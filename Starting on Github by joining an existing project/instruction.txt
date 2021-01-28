@@ -28,7 +28,9 @@ mv {filename_here} {new_filename_here}                      ===> deleted file, a
 
 git mv {filename_here} {new_filename_here}                  ===> rename file
 git mv {new_filename_here} {filename_here}                  ===> revert back (as if did not do anything)
+git add -A
 
 git mv starts.txt {'Adding git to an existing project'/}
 cd {'Adding git to an existing project'/}
 mv starts.txt ..
+git add -A
