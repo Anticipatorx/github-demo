@@ -1,0 +1,21 @@
+go to https://github.com/scm-ninja/starter-web
+
+Click Fork
+Anticipatorx/ starter-web                                   ===> Check id should reflect your own id now
+forked from scm-ninja/starter-web                           ===> origin repository
+
+Clone the repository to local directory
+
+
+BASIC WORKFLOW
+git status
+git add .
+git commit -m "message_here"
+git pull origin main                                        ===> always pull before pushing to be sure your repository is upto date
+git push origin main
+
+git commit -am "message_here"                               ===> add + -m (works only if git is tracking the files)
+git ls-files                                                ===> list of all files that git is tracking in the repository
+
+git reset HEAD {filename_here}                              ===> unstage files (added) back to the working directory
+git restore --staged {filename_here}                        ===> new way of unstaging
