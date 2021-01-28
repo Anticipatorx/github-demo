@@ -1,0 +1,20 @@
+    Go to the file directory (you want to extract to)
+    Right Click > Git Bash here]
+
+    initializr.com
+    download necessary files
+
+    unzip ~/{Downloads/Compressed/initializr-verekia-4.0.zip}       ===> Unziping the downloaded file
+
+ls
+mv initializr {web-project}                                         ===> copying the folder to {web-project} folder
+ls
+cd {web-project}
+git init
+ls -al
+git status
+git add .
+git status
+git commit -m "My first commit, inline"
+rm -rf .git                                                         ===> removes .git/
+
