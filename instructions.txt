@@ -1,0 +1,42 @@
+    Go to the file directory
+    Right Click > Git Bash here
+
+Setup account:
+    git --config git config --global user.name {"Eric Neil Regidor"}    ===> setup the username (global configuration)
+    git config --global user.email {"ericneilr@gmail.com"}              ===> setup the email (global configuration)
+
+    git config --global --list                                          ===> check the global configuration
+OUTPUT:
+    user.email=ericneilr@gmail.com
+    user.name=Eric Neil Regidor
+
+IN GITHUB:
+    Click GitHub ICON
+    Click New (Repository)
+    Type in repository name [no spaces]
+    *Write a brief description
+    Set repository to public
+    Check Add a README file
+    Click Create Repository
+
+TO CLONE THE REPOSITORY (IN GITHUB):
+    Click Code (Button)
+    Select https
+    Copy the link to clipboard
+
+IN GIT BASH:
+    git clone {https://github.com/Anticipatorx/github-demo.git}         ===> clone the repository from GitHub to local directory
+    ls                                                                  ===> check the content of the folder
+    cd {github-demo}                                                    ===> to go inside the project folder
+
+    git status                                                          ===> tells us that we are "On master branch" (default)
+                                                                        ===> Master is upto date with origin (automatic - relation)/master (github version)
+                                                                        ===> working directory/tree is clean (local files reflect the repository file)
+
+    echo {"Test Git Quick Start demo"} >> {start.txt }                  ===> creates a {start.txt} file, with "Test Git Quick Start demo" content within
+    cat {start.txt}                                                     ===> displays the content of {start.txt} file
+
+    git status                                                          ===> Untracked files: (files on our local directory that hasn't been added to Git(repository) yet)
+    git add {start.txt}                                                 ===> Changes to be committed: ()
+    git commit -m {"Adding start text file"}                            ===> Adding the changes to be committed with a message (-m) followed by the message
+    git status                                                          ===> back to clean working directory
