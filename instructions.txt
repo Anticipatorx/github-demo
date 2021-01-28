@@ -2,6 +2,7 @@
     Right Click > Git Bash here
 
 Setup account:
+    git version                                                         ===> check the version of Git and if its available
     git --config git config --global user.name {"Eric Neil Regidor"}    ===> setup the username (global configuration)
     git config --global user.email {"ericneilr@gmail.com"}              ===> setup the email (global configuration)
 
@@ -37,7 +38,13 @@ IN GIT BASH:
     cat {start.txt}                                                     ===> displays the content of {start.txt} file
 
     git status                                                          ===> Untracked files: (files on our local directory that hasn't been added to Git(repository) yet)
-    git add {start.txt}                                                 ===> Changes to be committed: ()
+    git add {start.txt}                                                 ===> add the changes to specific file / [git add .] -> adds changes to all files
+    git status                                                          ===> Changes to be committed: () 
     git commit -m {"Adding start text file"}                            ===> Adding the changes to be committed with a message (-m) followed by the message
     git status                                                          ===> back to clean working directory/tree
                                                                         ===> Your branch is ahead of 'origin/main' by 1 commit.
+    git push origin master/main                                         ===> push the commit to the repository
+                                                                        ===> origin -> refers to the Github copy of our repository
+                                                                        ===> master/main -> refers to our default and only branch in the repository
+    (PROMPT FOR GITHUB USERNAME AND PASSWORD)
+    REFRESH GITHUB REPOSITORY PAGE TO VIEW COMMITS                                                                    
