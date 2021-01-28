@@ -39,4 +39,5 @@ IN GIT BASH:
     git status                                                          ===> Untracked files: (files on our local directory that hasn't been added to Git(repository) yet)
     git add {start.txt}                                                 ===> Changes to be committed: ()
     git commit -m {"Adding start text file"}                            ===> Adding the changes to be committed with a message (-m) followed by the message
-    git status                                                          ===> back to clean working directory
+    git status                                                          ===> back to clean working directory/tree
+                                                                        ===> Your branch is ahead of 'origin/main' by 1 commit.
