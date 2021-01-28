@@ -34,3 +34,7 @@ git mv starts.txt {'Adding git to an existing project'/}
 cd {'Adding git to an existing project'/}
 mv starts.txt ..
 git add -A
+
+RENAME A FILE IN THE WINDOWS EXPLORER
+git add start.txt
+git add -u
