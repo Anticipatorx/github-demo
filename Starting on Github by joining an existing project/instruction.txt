@@ -22,3 +22,6 @@ git restore --staged {filename_here}                        ===> new way of unst
 
 git checkout -- {filename_here}                             ===> discharge changes in working directory
 git restore {filename_here}                                 ===> new way of discharge changes in working directory
+
+git mv {filename_here} {new_filename_here}                  ===> rename filename
+mv {filename_here} {new_filename_here}                      ===> deleted file, added new file with same content
