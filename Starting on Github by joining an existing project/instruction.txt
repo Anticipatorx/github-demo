@@ -73,3 +73,18 @@ git status
 git add -A
 git status
 git commit -m {"deleting {folder_name"} and all children}
+
+HISTORY
+--------------
+git help log
+git log
+<Press 'q' to quit>
+git log --abbrev-commit                                 ===>  show only a partial prefix
+git log --oneline --graph --decorate                    ===> --oneline (compressed the entries into one line)
+                                                        ===> ASCII graph
+                                                        ===> add labels to annotate the commits
+git log {c782b0c}...{26dcf35}                           ===> shows only the commits in the range
+git log --since={"3 days ago"}                          ===> date based searching
+git log -- {filename}                                   ===> returns the commits that involve the specific file
+git log --follow -- {filename/path}                     ===> commit history of the specific file
+git show {eab0d65d045305a5b8d6e5492135043a45d0123e}     ===> 
