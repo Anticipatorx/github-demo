@@ -61,4 +61,15 @@ git rm newfile.txt                  ===> delete file (tracked)
 git rm {hipster.txt}                ===> staged deletion
 git reset HEAD {hipster.txt}        ===> unstage the deletion
 git restore --staged {hipster.txt}  ===> new way of unstaging
-git restore {hipster.txt}           ===> restore the file to the repository    
+git restore {hipster.txt}           ===> restore the file to the repository
+
+rm start.txt
+git status
+git add -A
+git commit
+
+rm -rf {folder_name}
+git status
+git add -A
+git status
+git commit -m {"deleting {folder_name"} and all children}
