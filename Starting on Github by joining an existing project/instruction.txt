@@ -88,3 +88,9 @@ git log --since={"3 days ago"}                          ===> date based searchin
 git log -- {filename}                                   ===> returns the commits that involve the specific file
 git log --follow -- {filename/path}                     ===> commit history of the specific file
 git show {eab0d65d045305a5b8d6e5492135043a45d0123e}     ===> 
+
+ALIAS
+--------------
+git config --global alias.{name_of_command} {"log --all --graph --decorate --oneline"}
+git hist
+code ~/.gitconfig
