@@ -94,3 +94,11 @@ ALIAS
 git config --global alias.{name_of_command} {"log --all --graph --decorate --oneline"}
 git hist
 code ~/.gitconfig
+
+IGNORING UNWANTED FILES/ folder
+--------------
+code .gitignore
+    *FORMAT:
+        Specific File: {MyFile.txt}
+        File Pattern: {*.ext}
+        Folder: {my-folder/}
