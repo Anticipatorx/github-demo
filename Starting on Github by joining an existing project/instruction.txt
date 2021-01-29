@@ -8,11 +8,16 @@ Clone the repository to local directory
 
 
 BASIC WORKFLOW
+--------------
 git status
 git add .
-git commit -m "message_here"
+git commit -m {"message_here"}
 git pull origin main                                        ===> always pull before pushing to be sure your repository is upto date
 git push origin main
+
+git restore --staged {filename}                             ===> new way of unstaging
+git restore {filename}                                      ===> new way of discharge changes in working directory
+--------------
 
 git commit -am "message_here"                               ===> add + -m (works only if git is tracking the files)
 git ls-files                                                ===> list of all files that git is tracking in the repository
@@ -22,6 +27,9 @@ git restore --staged {filename_here}                        ===> new way of unst
 
 git checkout -- {filename_here}                             ===> discharge changes in working directory
 git restore {filename_here}                                 ===> new way of discharge changes in working directory
+
+RENAMING files
+--------------
 
 git mv {filename_here} {new_filename_here}                  ===> rename filename
 mv {filename_here} {new_filename_here}                      ===> deleted file, added new file with same content
@@ -38,3 +46,19 @@ git add -A
 RENAME A FILE IN THE WINDOWS EXPLORER
 git add start.txt
 git add -u
+
+DELETING files
+--------------
+code doomed.txt         ===> create text file
+ls
+git status
+rm doomed.txt           ===> delete text file (untracked)
+ls
+git status
+
+git rm newfile.txt                  ===> delete file (tracked)
+
+git rm {hipster.txt}                ===> staged deletion
+git reset HEAD {hipster.txt}        ===> unstage the deletion
+git restore --staged {hipster.txt}  ===> new way of unstaging
+git restore {hipster.txt}           ===> restore the file to the repository    
