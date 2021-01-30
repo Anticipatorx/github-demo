@@ -1,0 +1,65 @@
+BRANCHING
+--------------
+git branch -a                           ===> listing of all branches
+git branch {mynewbranch}                ===> creating a new branch
+git checkout {mynewbranch}              ===> selecting a branch to use
+git log --oneline --decorate            ===> git history
+git branch -m {mynewbranch} {newbranch} ===> renaming/moving {old_name} {newname}
+git branch -d {newbranch}               ===> delete a branch
+
+MERGING
+--------------
+(FAST FORWARDING)
+--------------
+git checkout -b {title-change}          ===> creating a new branch, then selecting that branch to use
+--AFTER COMMIT ON {title-change}, TO MERGE--
+git checkout {main}
+git merge {title-change}                ===> merge the changes in {title-change} to current selected branch
+
+(NO FAST FORWARDING)
+--------------
+git checkout -b {add-copyright}
+--AFTER COMMIT ON {add-copyright}, MERGE TO {main} (preserve branch off)--
+git merge {add-copyright} --no-ff       ===> NO FAST FORWARD MERGE
+
+(AUTOMATIC MERGES) -> with change on new branch and main branch
+--------------
+git checkout -b {simple-changes}
+--AFTER COMMIT ON {simple-changes}--
+git checkout {master}
+--AFTER COMMIT ON {master}--
+git {hist}
+git branch
+git merge {simple-changes} -m "Merging changes from simple-changes branch"
+git branch -d {simple-changes}
+
+CONFLICTING MERGES AND RESOLUTION
+--------------
+git checkout -b {realwork}
+--AFTER COMMIT ON {realwork}--
+git checkout {master}
+--AFTER COMMIT ON {master}-- (conflicting edits)
+git {hist}
+git branch
+git difftool {master} {realwork}
+git merge {realwork}
+ls
+code {simple.html}          ===> select file with conflicting merge //OPTIONAL
+git mergetool               ===> Opens p4merge window
+    --IN p4merge--
+    Select the changes you want to keep (bottom window)
+    Save
+    Close p4merge
+git commit -m {"message_here"}
+git status
+code .gitignore
+    --IN .gitignore file--
+    ADD *.orig
+    SAVE
+    Close .gitignore file
+git status
+git add .gitignore
+git commit -m "updating ignore file to exclude merge temp files"
+git branch
+git branch -d {realwork}
+git {hist}
