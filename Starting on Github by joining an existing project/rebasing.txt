@@ -1,0 +1,64 @@
+REBASING
+--------------
+git checkout -b {myfeature}
+--AFTER COMMIT ON {myfeature}--
+git checkout {master}
+--AFTER COMMIT ON {master}--
+git {hist}
+git checkout {myfeature}
+git rebase {master}                                     ===>source {master}, changes in {master} reflects in {myfeature} branch
+--MAKE SOME CHANGES TO FILES IN {myfeature} BRANCH--
+--AFTER COMMIT ON {myfeature}--
+git {hist}
+git checkout {master}
+git difftool {master} {myfeature}
+git merge {myfeature}
+git {hist}
+git branch -d {myfeature}
+
+SETUP REBASING CONFLICTING
+--------------
+ls
+--AFTER COMMIT ON {master}--
+git checkout -b {bigtouble}
+--AFTER COMMIT ON {bigtouble}--(conflicting edits)
+git checkout master
+--AFTER COMMIT ON {master}--(conflicting edits)
+git {hist}
+
+ABORTING A REBASE
+--------------
+git checkout {bigtrouble}
+git difftool {master} {bigtrouble}
+git rebase master
+(IF THERE ARE CONFLICTS THATS TOO COMPLICATED?)
+git rebase --abort
+git {hist}
+
+-->(CONTINUATION)
+REBASE CONFLICT AND RESOLUTION
+--------------
+git rebase master
+git mergetool               ===> Opens p4merge window
+    --IN p4merge--
+    Select the changes you want to keep (bottom window)
+    Save
+    Close p4merge
+git status
+git add {simple.html}
+git rebase --continue       ===> proceed with the REBASING
+git {hist}
+--AFTER COMMIT ON {bigtouble}--
+git checkout {master}
+git merge {bigtrouble}
+
+Pull with Rebase (GitHub)
+--------------
+git pull origin {master}
+git push origin {master}
+--AFTER COMMIT ON {master}--
+--MAKE CHANGE ON SOME FILE ON GITHUB (DEMO PURPOSE)--
+git fetch origin master
+git status
+git pull --rebase origin master
+git {hist}
