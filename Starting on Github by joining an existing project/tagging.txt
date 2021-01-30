@@ -1,0 +1,36 @@
+Simple Tag Example/ Lightweight Tags
+--------------
+git tag {myTag}                         ===> create a tag
+git tag --list                          ===> show list of Tags
+git show {myTag}                        ===> show commit with the tag
+git tag --delete {myTag}                ===> deletes the tag
+
+Annotated Tags
+--------------
+git tag -a {v-1.0}                        ===> (-a) means Annotated
+git tag --list
+
+Comparing Tags
+--------------
+git tag --list
+git tag -a {v-1.1}
+git commit --amend                          ===> ammend commit message
+git tag {v-1.2} -m {"Release 1.2"}
+git tag --list
+git diff {v-1.0}{ v-1.2}
+git difftool {v-1.0}{ v-1.2}
+
+Tagging Specific commit
+--------------
+git tag -a {v-0.9-beta} {96ef75b}           ===> annotate a tag to a specific commit
+
+Updating Tags
+--------------
+git tag -a {v-0.8-alpha} -f {b35fi67}          ===> (-f)-> force, move the tag to another commit
+
+Using Tags with Github
+--------------
+git push origin {v-0.9-beta} 
+git push origin {v-1-.1}
+git push origin master --tags                   ===> push all tags to Github
+git push origin :{v-0.8-alpha}                  ===> delete the tag on Github
