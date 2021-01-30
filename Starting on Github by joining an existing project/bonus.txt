@@ -1,0 +1,4 @@
+git reflog                                  ===> history of everything we've done
+git reset {e983453}                         ===> reseting commits (TIME TRAVELLING)
+git reset HEAD@{2}                          ===> reseting commits (TIME TRAVELLING)
+git reset HEAD^^                            ===> 2 stages
