@@ -1,0 +1,39 @@
+SIMPLE STASHING
+--------------
+--make change to a file--
+git STASHING                                ===> stash the work in progress
+--make change to another file--             ===> often priority work
+--commit the changes--
+git stash apply                             ===> retrieves the stashed work in progress
+--commit the changes--
+git stash list                              ===> list of stashed WIP
+git stash drop                              ===> drops the stashed WIP
+
+STASHING UNTRACKED FILES AND USING POP
+--------------
+git stash -u                               ===> includes untracked files to the stash
+git stash pop                              ===> apply the stash, and drop it
+
+MANAGING MULTIPLE STASHES
+--------------
+git stash save "simple changes"            ===> first stash:    index{2}
+git stash save "index changes"             ===> second stash:   index{1}
+git stash save "Readme changes"            ===> third stash:    index{0}
+git stash list
+git stash show stash@{1}                   ===> show specific stash
+git stash apply stash@{1}                  ===> apply specific stash
+git stash drop stash@{1}                   ===> drop specific stash
+git stash clear                            ===> empty list of stashes
+
+STASHING TO A BRANCH
+--------------
+git add {index.html}                       ===> staging area
+git stash -u
+git stash branch {newchanges}              ===> creates new branch, switch into that branch, stash is applied, stash is dropped
+git add .                                  ===> staging area
+git commit
+--MERGE INTO MAIN BRANCH--
+git checkout master
+git merge newchanges
+--DELETE BRANCH
+git branch -d newchanges
