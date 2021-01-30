@@ -102,3 +102,30 @@ code .gitignore
         Specific File: {MyFile.txt}
         File Pattern: {*.ext}
         Folder: {my-folder/}
+
+P4MERGE WINDOWS INSTALLATION
+--------------
+git config --global merge.tool p4merge
+git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global mergetool.prompt false
+git config --global diff.tool p4merge
+git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global difftool.prompt false
+git config --global --list
+git config --global -e
+
+git diff                                ===> Comparing Working Directory and the Staging Area
+git difftool
+git diff HEAD                           ===> Comparing Working Directory and Git Repository (Last Commit)
+git difftool HEAD
+git diff --staged HEAD                  ===> Comparing between the Staging Area and the Git Repository (Last Commit)
+git difftool --staged HEAD
+git diff -- README.md                   ===> Limiting Comparsons to one File (or path)
+git difftool -- README.md
+git log --oneline                       
+git diff 4beb7f0 HEAD                   ===> Comparing Between Commits
+git difftool 4beb7f0 HEAD
+git diff HEAD HEAD^                     ===> HEAD vs 1 commit before HEAD
+git difftool HEAD HEAD^                 
+git diff master origin/master           ===> Comparing Between Local and Remote Master Branches
+git difftool master origin/master
